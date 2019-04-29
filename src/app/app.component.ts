@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { Article } from './article/article.model'; // <-- import this
 
+// selector: 'app-root',
+// The component is applied to the <app-root></app-root> tag in your index.html. If your index.html doesn't have that 
+// tag Angular will fail at startup. You can control where you Angular application will be played.
+// This is special for the Angular component that is created using bootstrap(AppComponent)
 
 @Component({
   selector: 'app-root',
@@ -24,8 +28,7 @@ export class AppComponent {
 
     addArticle(title: HTMLInputElement,link: HTMLInputElement): boolean{
 
-      console.log(`Adding article title: ${title.value} and link: ${link.value}`);
-      
+      console.log(`Adding article title: ${title.value} and link: ${link.value}`);  
       this.articles.push(new Article(title.value, link.value, 0));  
       
       title.value = ''; 

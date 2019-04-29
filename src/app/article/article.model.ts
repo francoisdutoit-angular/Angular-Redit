@@ -14,11 +14,13 @@ export class Article {
     voteUp(): void { 
         this.votes += 1;  
     }
+
     
     voteDown(): void {  
         this.votes -= 1;  
     } 
-        
+
+   
     //domain() is a utility function that extracts the domain from a URL
     domain(): string {  
         try { 
